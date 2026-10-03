@@ -1,0 +1,423 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+     font-family: 'Poppins', sans-serif; 
+       /* h1, h2, h3  font-family: 'Playfair Display', serif;  */
+
+}
+.nav{
+    width:100%;
+    background-color:#28120a;
+    box-shadow: 0px 0px 3px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 20px; /* konjam padding add pannu */
+}
+
+.sri{ color: #d28b45; }
+.image1{ height: 80px; width: 80px; } /* 100px perusa irukku, 60 best */
+.top{ display: flex; justify-content:start; align-items: center; }
+.sweet{ font-size: 40px; color: white; font-family: "Great Vibes", cursive; }
+
+a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 20px 15px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d28b45;
+    transition: 0.4s;
+}
+a:hover{ color: #d28b45; }
+a:hover::before{ width: 100%; }
+
+input{ display: none; }
+label{ display: none; }
+.subnav{ position: relative; font-family: "Montserrat", sans-serif; left: 0px; }
+/*---------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px)
+{
+     .nav{
+        width:100%;
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .subnav{
+        width:100%;
+    }
+    a{
+        font-size: 17px;
+        margin: 0px 0px;
+        
+    }
+        .sweet {
+        font-size: 37px;
+        width: 207px;
+    }
+}
+/*--------------------------------------------------------*/
+@media only screen and (min-width:300px) and (max-width:600px)
+{
+    .nav{
+        width:100%;
+        height: 100px;
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+         padding: 10px 0px;
+    }
+     .sweet{
+        font-size: 30px;
+        
+    }
+    .image1{
+        height: 80px;
+        width:80px;
+    }
+    .subnav{
+        width: 100%;
+        background-color:#28120a;
+        box-shadow: 0px 0px 3px black;
+        /* background-color: rgb(214, 126, 10); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        top:-11px;
+        left: -420px;
+        transition: 1s linear;
+       
+        
+    }
+    input:checked+.subnav{
+    left:0px;
+    }
+    label{
+    display: inline;
+   }
+   .bar{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top:-50px;
+    left: 310px;
+   }
+
+
+   .subnav a{
+    text-align: center;
+    margin-left: -20px;
+   }
+   
+   
+}
+/*-------------------------------------------------------------------------*/
+
+.hero{
+  background:#FDF0D5;
+  text-align:center;
+  padding:50px 20px;
+ padding-top: 100px;
+
+  
+}
+.hero h2{
+  font-size:48px;
+  font-weight:800;
+  color:#6B3F25;
+}
+
+/* CONTACT WRAPPER */
+.contact-wrapper{
+  max-width:1100px;
+  margin:30px auto;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:30px;
+  padding:0 20px;
+}
+
+/* FORM */
+.contact-form{
+  background:#FDF0D5;
+  border:1.5px solid #8B5E3C;
+  border-radius:20px;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.contact-form h3{font-size:22px}
+.contact-form input,
+.contact-form textarea{
+  padding:12px;
+  border:1px solid #C9A88A;
+  border-radius:10px;
+  outline:none;
+  background:#FFFBF2;
+}
+.contact-form textarea{height:100px;resize:none}
+.contact-form button{
+  background:#A66A3F;
+  color:white;
+  border:none;
+  padding:14px;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.contact-form button:hover{
+  background:#8B5530;
+}
+
+
+
+
+/*----------------------------------------------------------------------------*/
+footer{
+    min-height: 50px;
+    width: 100%; /* 100vw venam, scroll varum */
+    background:url("./food\ background.jpg");
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.row{
+   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* center venda, top la irukanum */
+    color: white;
+    gap: 60px;
+} 
+
+.last{
+    font-size: 55px;
+    padding-bottom: 15px;
+    font-family: "Great Vibes", cursive;
+}
+
+.last1{
+    font-size: 18px;
+    width: 100%;
+    max-width: 500px;
+    line-height: 32px;
+    font-family: "Montserrat", sans-serif;
+    /* color: #e0c9b5; */
+}
+
+.last2, .last3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.sri{
+    color: #d28b45;
+}
+
+.right{
+    height: auto;
+    width: 200px; 
+    position: absolute;
+    bottom: -10px;
+    right: 10px; /* left: 1010px thappu da, right use pannu */
+    top: auto;
+    left: auto;
+}
+
+
+
+.icon{
+    font-size: 14px;
+    color: #a88c76;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    transform: none; /* translate ellam delete */
+}
+
+
+ /*------------------------------------------------------------*/
+ @media only screen and (min-width:600px) and (max-width:900px)
+ {
+   .row{
+    
+    transform: translateY(0px)!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    color: white;
+  flex-wrap: wrap;
+    
+} 
+.cola{
+    margin-left: 30px!important;
+    
+} 
+.last{
+
+    font-size: 60px;
+    padding-bottom: 20px;
+    font-family: "Great Vibes", cursive;
+    
+}
+.last1{
+    
+    font-size: 20px;
+    width: 800px;
+    line-height: 40px;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
+}
+.last2{
+    margin-top: 40px;
+    font-size: 20px!important;
+   line-height: 40px;
+      margin-left: 0px;
+      font-family: "Montserrat", sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
+}
+.last3{
+    margin-left: 130px;
+    line-height: 40px;
+    font-size: 20px!important;
+    width: 500px;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
+}
+.sri{
+    color: #d28b45;
+}
+.right{
+    height: 130px;
+    width: 100px;
+    top: 80%;
+    left: 550px;
+}
+
+.icon {
+        transform: translateX(-15px) translateY(6px);
+    }
+
+    
+
+
+}
+
+
+ @media only screen and (min-width:300px) and (max-width:600px)
+ {
+    footer{
+        width:100%;
+        min-height: 1100px;
+    }
+    .row{
+    
+    transform: translateY(-100px)!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    color: white;
+    flex-direction: column;
+   
+} 
+.cola{
+    margin-left: 30px!important;
+    
+} 
+.last{
+    margin-top: 100px;
+    font-size: 35px;
+    padding-bottom: 20px;
+    font-family: "Great Vibes", cursive;
+}
+.last1{
+    color: white;
+    font-size: 20px;
+    width: 317px;
+    line-height: 40px;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
+}
+.last3{
+    margin-left: 0px;
+    line-height: 40px;
+    font-size: 20px!important;
+    width: 300px;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
+}
+.last2{
+    margin-left: -200px;
+    margin-bottom: 50px;
+}
+.sri {
+        position: relative;
+        top: 0px;
+ }
+
+ .icon{
+    
+     transform: translateX(-4px)translateY(-57px);
+     font-size: 14px;
+     /* color: black; */
+}
+
+.right {
+        height: 120px;
+        width: 124px;
+        left: 60%;
+        top: 85%;
+    }
+
+
+.contact-wrapper{display:flex;
+flex-direction: column;
+
+}
+
+.hero h2 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #6B3F25;
+}
+
+ }
+
+
